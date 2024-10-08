@@ -40,7 +40,8 @@ Through this approach, the project aims to provide personalized learning experie
       df = pd.read_csv('ednet_kt3.csv')
   
       # Check the first few rows
-      print(df.head())```
+      print(df.head())
+      ```
 
     - Create features such as the number of attempts for each skill and the time between attempts for a more in-depth understanding of user behavior.
 
