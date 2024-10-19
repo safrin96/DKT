@@ -1,0 +1,13 @@
+name: kt3_dkt_env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas
+  - numpy
+  - keras
+  - tensorflow
+  - matplotlib
+  - scikit-learn
+  - scipy
+  - pip
