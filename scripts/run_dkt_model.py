@@ -1,7 +1,9 @@
 import sys
 import os
 import pandas as pd
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Users/sumaiyashrabony/Desktop/DataScience/src')))
+# Add project root to Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, project_root)
 
 # scripts/run_dkt_model.py
 from src.data_processing import load_data, preprocess_data # type: ignore
@@ -10,7 +12,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 # Load and preprocess the data
-data_path = '/Users/sumaiyashrabony/Desktop/DataScience/KT3/preprocessed_u1.csv'  # Update this to the correct path where the preprocessed data is saved
+data_path = '../u1.csv'  # Update this to the correct path where the preprocessed data is saved
 df = pd.read_csv(data_path)
 df = preprocess_data(df)
 
@@ -34,4 +36,4 @@ model = build_dkt_model(input_shape)
 history = train_dkt_model(model, X_train, y_train, X_test, y_test, epochs=10)
 
 # Save the model and history if needed
-model.save('/Users/sumaiyashrabony/Desktop/DataScience/KT3/saved_model.h5')
+model.save('../KT3/saved_model.h5')
