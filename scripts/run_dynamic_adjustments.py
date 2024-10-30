@@ -2,13 +2,13 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Users/sumaiyashrabony/Desktop/DataScience/src')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 from src.dynamic_adjustments import dynamic_adjustments # type: ignore
 import numpy as np
 
 # Load the test data (X_test)
-X_test = np.load('/Users/sumaiyashrabony/Desktop/DataScience/KT3/X_test.npy')
+X_test = np.load('../KT3/X_test.npy')
 
 # Run dynamic adjustments based on learning activity
 explanation_times, lecture_times = dynamic_adjustments(X_test)
